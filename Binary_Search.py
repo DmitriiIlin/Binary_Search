@@ -4,8 +4,8 @@ class BinarySearch:
         #Конструктор класса
         self.array=input_array
         self.array_len=len(self.array)
-        self.right=self.array_len-1
-        self.left=0
+        self.Right=self.array_len-1
+        self.Left=0
         self.Stop_Search=False
         self.Success=False
 
@@ -17,15 +17,15 @@ class BinarySearch:
                 return -1
         if self.array_len==0:
             return None
-        middle_index=(self.left+self.right+1)//2
+        middle_index=(self.Left+self.Right+1)//2
         middle_value=self.array[middle_index]
         if N>middle_value:
-            self.left=middle_index
+            self.Left=middle_index
         elif N<middle_value:
-            self.right=middle_index
+            self.Right=middle_index
         else:
             self.Success=True
-        if self.left==self.right:
+        if self.Left==self.Right:
             self.Stop_Search=True
         else:
             pass 
